@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Na Beca Store — Admin</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400..900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f6f3;--ink:#101010;--ink2:#70706e;--line:#e7e7e4;--acc:#df2222;--card:#fff}
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:Archivo,system-ui,sans-serif;background:var(--bg);color:var(--ink);min-height:100vh}.shell{display:grid;grid-template-columns:240px 1fr;min-height:100vh}.side{background:#101010;color:#fff;padding:26px 20px;display:flex;flex-direction:column}.brand{font-weight:900;letter-spacing:.09em;font-size:18px}.side small{color:#9d9d99;margin-top:6px}.nav{margin-top:36px;display:grid;gap:8px}.nav a{color:#d9d9d5;text-decoration:none;padding:11px 12px;border-radius:8px;font-size:13px;font-weight:650}.nav a.active{background:#fff;color:#101010}.side .foot{margin-top:auto;color:#8e8e89;font-size:11px;line-height:1.6}.main{padding:32px}.top{display:flex;justify-content:space-between;gap:20px;align-items:flex-start}.kicker{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--acc)}h1{font-size:clamp(28px,4vw,44px);line-height:1;margin-top:8px}.sub{color:var(--ink2);margin-top:10px;max-width:700px;line-height:1.6}.pill{background:#fff;border:1px solid var(--line);padding:10px 14px;border-radius:99px;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:30px}.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}.card b{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.08em}.card strong{display:block;font-size:30px;margin-top:12px}.card span{display:block;color:var(--ink2);font-size:12px;margin-top:4px}.panel{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;margin-top:16px}.panel h2{font-size:18px}.todo{margin-top:18px;display:grid;gap:10px}.todo div{display:flex;gap:12px;align-items:flex-start;padding:13px 0;border-bottom:1px solid var(--line)}.todo div:last-child{border-bottom:0}.dot{width:10px;height:10px;border-radius:50%;background:var(--acc);margin-top:5px;flex:none}.todo b{font-size:13px}.todo p{color:var(--ink2);font-size:12px;margin-top:3px;line-height:1.5}.back{display:inline-block;margin-top:20px;color:var(--ink);font-size:12px;font-weight:800;text-decoration:none;border-bottom:1px solid var(--ink)}
+@media(max-width:800px){.shell{grid-template-columns:1fr}.side{display:none}.main{padding:22px}.grid{grid-template-columns:1fr}.top{flex-direction:column}.pill{white-space:normal}}
+</style>
+</head>
+<body>
+<div class="shell">
+  <aside class="side">
+    <div class="brand">NA BECA</div>
+    <small>painel administrativo</small>
+    <nav class="nav">
+      <a class="active" href="#">Visão geral</a>
+      <a href="#">Instagram</a>
+      <a href="#">Produtos</a>
+      <a href="#">Fotos</a>
+      <a href="#">Pedidos</a>
+      <a href="#">Configurações</a>
+    </nav>
+    <div class="foot">Estrutura inicial do painel.<br>Integrações serão conectadas nas próximas etapas.</div>
+  </aside>
+  <main class="main">
+    <div class="top">
+      <div>
+        <div class="kicker">Admin em preparação</div>
+        <h1>Painel da Na Beca</h1>
+        <p class="sub">Base preparada para centralizar Instagram, catálogo, fotos reais dos produtos e operação da loja. Nesta versão, o painel é apenas estrutural e ainda não possui autenticação nem integração com a API do Instagram.</p>
+      </div>
+      <div class="pill">estrutura futura</div>
+    </div>
+    <section class="grid">
+      <article class="card"><b>Produtos</b><strong>8</strong><span>catálogo atual da loja</span></article>
+      <article class="card"><b>Fotos reais</b><strong>0</strong><span>pasta /fotos preparada</span></article>
+      <article class="card"><b>Instagram</b><strong>—</strong><span>integração ainda não conectada</span></article>
+    </section>
+    <section class="panel">
+      <h2>Próximas conexões previstas</h2>
+      <div class="todo">
+        <div><span class="dot"></span><div><b>Instagram</b><p>Conectar conta, leitura de mídia e métricas, e eventualmente uso de conteúdo no catálogo.</p></div></div>
+        <div><span class="dot"></span><div><b>Fotos dos produtos</b><p>Trocar as ilustrações atuais pelas imagens reais salvas em <code>/fotos</code>.</p></div></div>
+        <div><span class="dot"></span><div><b>Gestão de catálogo</b><p>Transformar produtos, preços, tamanhos e estoque em dados editáveis pelo painel.</p></div></div>
+        <div><span class="dot"></span><div><b>Pedidos e checkout</b><p>Conectar gateway de pagamento e registrar pedidos reais em uma etapa posterior.</p></div></div>
+      </div>
+      <a class="back" href="/">← voltar para a loja</a>
+    </section>
+  </main>
+</div>
+</body>
+</html>
