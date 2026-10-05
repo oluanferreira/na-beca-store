@@ -1,0 +1,32 @@
+name: Fetch MianMian Final
+
+on:
+  push:
+    branches: [mianmian-temp]
+    paths:
+      - ".github/workflows/fetch-mianmian-final.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: mianmian-temp
+      - name: Fetch final video
+        run: |
+          mkdir -p tmp/mianmian/final
+          curl -L --fail --retry 3 -o tmp/mianmian/final/MianMian_Viral_Final_v2.mp4 "https://d2ol7oe51mr4n9.cloudfront.net/user_2zhwfglrP6c6mWb8wIlhPo17FNr/cff5a4ae-5183-4d84-b725-04233e9bf46d.mp4"
+          test -s tmp/mianmian/final/MianMian_Viral_Final_v2.mp4
+          ffprobe -v error -show_entries format=duration,size -of default=nw=1 tmp/mianmian/final/MianMian_Viral_Final_v2.mp4
+      - name: Commit final
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tmp/mianmian/final/MianMian_Viral_Final_v2.mp4
+          git commit -m "Add MianMian final video" || exit 0
+          git push origin HEAD:mianmian-temp
